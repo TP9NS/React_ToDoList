@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './Form.css';
-
+import PropTypes from 'prop-types';
 
 class Form extends Component {
     render() {
@@ -17,4 +17,10 @@ class Form extends Component {
     }
 }
 
+Form.propTypes = {
+    mytodo: PropTypes.string,
+    myEnter: PropTypes.func,
+    myChange: PropTypes.func,
+    myCreate: PropTypes.func
+};
 export default Form;

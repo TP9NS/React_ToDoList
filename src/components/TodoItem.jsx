@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './TodoItem.css';
-
+import PropTypes from 'prop-types';
 class TodoItem extends Component {
     render() {
         const { text, checked, id, onToggle, onRemove } = this.props;
@@ -21,4 +21,11 @@ class TodoItem extends Component {
         );
     }
 }
+TodoItem.propTypes = {
+    text: PropTypes.string,
+    checked: PropTypes.bool,
+    id: PropTypes.number,
+    onToggle: PropTypes.func,
+    onRemove: PropTypes.func
+};
 export default TodoItem
